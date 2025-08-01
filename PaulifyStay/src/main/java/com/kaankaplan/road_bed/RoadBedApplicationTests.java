@@ -1,13 +1,17 @@
 package com.kaankaplan.road_bed;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
-@SpringBootTest
-class RoadBedApplicationTests {
+@SpringBootApplication
+@EnableCaching
+@EnableAspectJAutoProxy
+public class RoadBedApplication {
 
-    @Test
-    void contextLoads() {
+    public static void main(String[] args) {
+        SpringApplication.run(RoadBedApplication.class, args);
     }
 
 }
